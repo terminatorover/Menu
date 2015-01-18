@@ -17,11 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eNi-CM-sE0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bk-1" translatesAutoresizingMaskIntoConstraints="NO" id="eNi-CM-sE0">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cooling-50" translatesAutoresizingMaskIntoConstraints="NO" id="A4O-IB-trM">
                                 <rect key="frame" x="16" y="20" width="50" height="50"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Urn-Ww-Ksl"/>
                                     <constraint firstAttribute="height" constant="50" id="uNe-aS-iWi"/>
@@ -117,6 +118,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bk-1" width="362" height="241"/>
         <image name="cooling-50" width="50" height="50"/>
         <image name="dna_helix-50" width="50" height="50"/>
         <image name="geography-50" width="50" height="50"/>
