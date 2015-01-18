@@ -9,6 +9,9 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+/**
+ *  images
+ */
 @property (weak, nonatomic) IBOutlet UIImageView *i1;
 @property (weak, nonatomic) IBOutlet UIImageView *i2;
 @property (weak, nonatomic) IBOutlet UIImageView *i3;
@@ -16,8 +19,23 @@
 @property (weak, nonatomic) IBOutlet UIImageView *i5;
 @property (weak, nonatomic) IBOutlet UIImageView *i6;
 
+/**
+ *  labels
+ */
+@property (weak, nonatomic) IBOutlet UILabel *l1;
+@property (weak, nonatomic) IBOutlet UILabel *l2;
+@property (weak, nonatomic) IBOutlet UILabel *l3;
+@property (weak, nonatomic) IBOutlet UILabel *l4;
+@property (weak, nonatomic) IBOutlet UILabel *l5;
+@property (weak, nonatomic) IBOutlet UILabel *l6;
+
+
+
+
+
 //---->
 @property (weak, nonatomic) IBOutlet UIImageView *ibottom;
+
 
 @end
 
@@ -47,12 +65,19 @@
     self.i5.transform = [self comboTransform];
     self.i6.transform = [self comboTransform];
 
+    self.l1.transform = [self comboTransform];
+    self.l2.transform = [self comboTransform];
+    self.l3.transform = [self comboTransform];
+    self.l4.transform = [self comboTransform];
+    self.l5.transform = [self comboTransform];
+    self.l6.transform = [self comboTransform];
+    
 }
 
 - (IBAction)bottomTap:(id)sender
 {
     
-    CGFloat moveOut = .52;
+    CGFloat moveOut = .6;
     CGFloat delay = 0.0;
     if(!tapped)
     {
@@ -91,16 +116,17 @@
           initialSpringVelocity:4
                         options:0 animations:^{
 
-                            
+                            self.l6.transform = CGAffineTransformIdentity;
                             self.i6.transform = CGAffineTransformIdentity;
     } completion:^(BOOL finished) {
         
     }];
     [UIView animateWithDuration:timing
-                          delay:0.13
+                          delay:0.1 + (0.05* 1)
          usingSpringWithDamping:damping
           initialSpringVelocity:4
                         options:0 animations:^{
+                            self.l5.transform = CGAffineTransformIdentity;
                             self.i5.transform = CGAffineTransformIdentity;
                         } completion:^(BOOL finished) {
                             
@@ -111,6 +137,7 @@
          usingSpringWithDamping:.6
           initialSpringVelocity:4
                         options:0 animations:^{
+                            self.l4.transform = CGAffineTransformIdentity;
                             self.i4.transform = CGAffineTransformIdentity;
                         } completion:^(BOOL finished) {
                             
@@ -120,6 +147,7 @@
          usingSpringWithDamping:.6
           initialSpringVelocity:4
                         options:0 animations:^{
+                            self.l3.transform = CGAffineTransformIdentity;
                             self.i3.transform = CGAffineTransformIdentity;
                         } completion:^(BOOL finished) {
                             
@@ -129,6 +157,7 @@
          usingSpringWithDamping:damping
           initialSpringVelocity:4
                         options:0 animations:^{
+                            self.l2.transform = CGAffineTransformIdentity;
                             self.i2.transform = CGAffineTransformIdentity;
                         } completion:^(BOOL finished) {
                             
@@ -139,20 +168,21 @@
          usingSpringWithDamping:damping
           initialSpringVelocity:4
                         options:0 animations:^{
+                            self.l1.transform = CGAffineTransformIdentity;
                             self.i1.transform = CGAffineTransformIdentity;
                         } completion:^(BOOL finished) {
                             
                         }];
     
-    [UIView animateWithDuration:timing
-                          delay:0.23
-         usingSpringWithDamping:damping
-          initialSpringVelocity:4
-                        options:0 animations:^{
-                            self.i1.transform = CGAffineTransformIdentity;
-                        } completion:^(BOOL finished) {
-                            
-                        }];
+//    [UIView animateWithDuration:timing
+//                          delay:0.23
+//         usingSpringWithDamping:damping
+//          initialSpringVelocity:4
+//                        options:0 animations:^{
+//                            self.i1.transform = CGAffineTransformIdentity;
+//                        } completion:^(BOOL finished) {
+//                            
+//                        }];
     
 
 
@@ -179,6 +209,7 @@
           initialSpringVelocity:4
                         options:0 animations:^{
                             self.i1.transform = [self comboTransform];
+                            self.l1.transform = CGAffineTransformMakeScale(0.001, 0.001);
                             self.i1.alpha = 0.0;
                         } completion:^(BOOL finished) {
                             
@@ -189,6 +220,7 @@
           initialSpringVelocity:4
                         options:0 animations:^{
                             self.i2.transform = [self comboTransform];
+                            self.l2.transform = CGAffineTransformMakeScale(0.001, 0.001);
                             self.i2.alpha = 0.0;
                         } completion:^(BOOL finished) {
                             
@@ -200,6 +232,7 @@
           initialSpringVelocity:4
                         options:0 animations:^{
                             self.i3.transform = [self comboTransform];
+                            self.l3.transform = CGAffineTransformMakeScale(0.001, 0.001);
                             self.i3.alpha = 0.0;
                         } completion:^(BOOL finished) {
                             
@@ -210,6 +243,7 @@
           initialSpringVelocity:4
                         options:0 animations:^{
                             self.i4.transform = [self comboTransform];
+                            self.l4.transform = CGAffineTransformMakeScale(0.001, 0.001);
                             self.i4.alpha = 0.0;
                         } completion:^(BOOL finished) {
                             
@@ -220,6 +254,7 @@
           initialSpringVelocity:4
                         options:0 animations:^{
                             self.i5.transform = [self comboTransform];
+                            self.l5.transform = CGAffineTransformMakeScale(0.001, 0.001);
                             self.i5.alpha =  0.0;
                         } completion:^(BOOL finished) {
                             
@@ -231,6 +266,7 @@
           initialSpringVelocity:4
                         options:0 animations:^{
                             self.i6.transform = [self comboTransform];
+                            self.l6.transform = CGAffineTransformMakeScale(0.001, 0.001);
                             self.i6.alpha = 0.0;
                         } completion:^(BOOL finished) {
                             [self unhide];

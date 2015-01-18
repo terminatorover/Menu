@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DribbleInspired/ViewController.m"
-            timestampString = "443247150.784414"
+            timestampString = "443250534.880063"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "-bottomTap:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DribbleInspired/ViewController.m"
-            timestampString = "443249181.699845"
+            timestampString = "443250631.999165"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "253"
-            endingLineNumber = "253"
+            startingLineNumber = "289"
+            endingLineNumber = "289"
             landmarkName = "-unhide"
             landmarkType = "5">
          </BreakpointContent>

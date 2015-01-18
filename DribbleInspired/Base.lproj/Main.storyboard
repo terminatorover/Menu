@@ -74,28 +74,118 @@
                                     <outletCollection property="gestureRecognizers" destination="CXk-Qc-e0p" appends="YES" id="Q9e-Zb-Fty"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbp-wI-1ZN">
+                                <rect key="frame" x="96" y="420" width="80" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Iy4-Kk-RsJ"/>
+                                    <constraint firstAttribute="height" constant="21" id="Oho-uA-Eg3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wk6-xe-pKT">
+                                <rect key="frame" x="96" y="345" width="80" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Nb8-u1-3rR"/>
+                                    <constraint firstAttribute="width" constant="80" id="fLv-75-ACc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diamond" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxB-lM-EnF">
+                                <rect key="frame" x="96" y="271" width="106" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="nUR-Cr-h7e"/>
+                                    <constraint firstAttribute="height" constant="21" id="wTK-2A-4PX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Globe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K43-n6-Yfi">
+                                <rect key="frame" x="96" y="188" width="80" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="6sc-p7-iSx"/>
+                                    <constraint firstAttribute="height" constant="21" id="Wsn-ot-sLx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Helix" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pb1-vr-Sma">
+                                <rect key="frame" x="96" y="112" width="80" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="n82-Ox-k41"/>
+                                    <constraint firstAttribute="width" constant="80" id="poj-Fr-ZaE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snow" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tge-RP-4iX">
+                                <rect key="frame" x="96" y="34" width="80" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="KN0-vc-pqJ"/>
+                                    <constraint firstAttribute="width" constant="80" id="xOG-fU-SLq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Tge-RP-4iX" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="14" id="05L-VU-1xv"/>
                             <constraint firstItem="A4O-IB-trM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="3e3-yV-Fre"/>
+                            <constraint firstItem="BJs-Jo-I00" firstAttribute="centerY" secondItem="Wk6-xe-pKT" secondAttribute="centerY" id="6Oo-bM-7eN"/>
                             <constraint firstItem="BJs-Jo-I00" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="7K5-xP-UwK"/>
                             <constraint firstItem="Yg0-eY-gHh" firstAttribute="top" secondItem="smL-mM-w3x" secondAttribute="bottom" constant="74" id="7M4-LV-UTr"/>
+                            <constraint firstItem="QxB-lM-EnF" firstAttribute="top" secondItem="K43-n6-Yfi" secondAttribute="bottom" constant="62" id="Cgp-bA-v98"/>
+                            <constraint firstItem="K43-n6-Yfi" firstAttribute="top" secondItem="Pb1-vr-Sma" secondAttribute="bottom" constant="55" id="H9c-Rz-Mxd"/>
                             <constraint firstItem="Odt-ni-Q3D" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Izj-21-xxg"/>
                             <constraint firstItem="HND-jP-aze" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Ot7-b0-ocK"/>
                             <constraint firstItem="MOA-Yf-ghL" firstAttribute="top" secondItem="HND-jP-aze" secondAttribute="bottom" constant="26" id="Pag-i3-Hcc"/>
+                            <constraint firstItem="K43-n6-Yfi" firstAttribute="leading" secondItem="MOA-Yf-ghL" secondAttribute="trailing" constant="30" id="TsA-sC-UrY"/>
+                            <constraint firstItem="Tbp-wI-1ZN" firstAttribute="centerY" secondItem="smL-mM-w3x" secondAttribute="centerY" id="UHh-EY-8Vu"/>
+                            <constraint firstItem="Wk6-xe-pKT" firstAttribute="top" secondItem="QxB-lM-EnF" secondAttribute="bottom" constant="53" id="Udu-kp-AzG"/>
                             <constraint firstItem="smL-mM-w3x" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Umr-Jh-dUu"/>
+                            <constraint firstItem="K43-n6-Yfi" firstAttribute="centerY" secondItem="MOA-Yf-ghL" secondAttribute="centerY" id="VfO-uo-8ET"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Yg0-eY-gHh" secondAttribute="bottom" constant="20" id="Yay-Wi-t7j"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eNi-CM-sE0" secondAttribute="trailing" constant="-16" id="agp-zp-eVu"/>
                             <constraint firstItem="eNi-CM-sE0" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="ayB-Ua-m4p"/>
                             <constraint firstItem="HND-jP-aze" firstAttribute="top" secondItem="A4O-IB-trM" secondAttribute="bottom" constant="28" id="bMO-kK-sST"/>
                             <constraint firstItem="Yg0-eY-gHh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="cyH-Bg-znw"/>
+                            <constraint firstItem="QxB-lM-EnF" firstAttribute="leading" secondItem="Odt-ni-Q3D" secondAttribute="trailing" constant="30" id="dRk-0c-4nE"/>
+                            <constraint firstItem="Tbp-wI-1ZN" firstAttribute="leading" secondItem="smL-mM-w3x" secondAttribute="trailing" constant="30" id="eJq-R9-Xfx"/>
+                            <constraint firstItem="Wk6-xe-pKT" firstAttribute="leading" secondItem="BJs-Jo-I00" secondAttribute="trailing" constant="30" id="efm-gq-lwd"/>
+                            <constraint firstItem="QxB-lM-EnF" firstAttribute="leading" secondItem="Odt-ni-Q3D" secondAttribute="trailing" constant="30" id="gwQ-rt-tWy"/>
                             <constraint firstItem="Odt-ni-Q3D" firstAttribute="top" secondItem="MOA-Yf-ghL" secondAttribute="bottom" constant="33" id="i6U-ai-Aoj"/>
+                            <constraint firstItem="Odt-ni-Q3D" firstAttribute="centerY" secondItem="QxB-lM-EnF" secondAttribute="centerY" id="iXS-EK-1dl"/>
+                            <constraint firstItem="Pb1-vr-Sma" firstAttribute="centerY" secondItem="HND-jP-aze" secondAttribute="centerY" id="j4f-VF-qXk"/>
+                            <constraint firstItem="A4O-IB-trM" firstAttribute="centerY" secondItem="Tge-RP-4iX" secondAttribute="centerY" id="jKm-9S-fuL"/>
                             <constraint firstItem="smL-mM-w3x" firstAttribute="top" secondItem="BJs-Jo-I00" secondAttribute="bottom" constant="25" id="jU5-Il-ybU"/>
+                            <constraint firstItem="Tge-RP-4iX" firstAttribute="leading" secondItem="A4O-IB-trM" secondAttribute="trailing" constant="30" id="jkZ-oz-v7y"/>
                             <constraint firstItem="eNi-CM-sE0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="lRM-Ag-HH3"/>
+                            <constraint firstItem="Pb1-vr-Sma" firstAttribute="leading" secondItem="HND-jP-aze" secondAttribute="trailing" constant="30" id="nO1-tL-w4V"/>
                             <constraint firstItem="MOA-Yf-ghL" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="sCG-BV-6lt"/>
                             <constraint firstItem="BJs-Jo-I00" firstAttribute="top" secondItem="Odt-ni-Q3D" secondAttribute="bottom" constant="24" id="tBl-eK-1AE"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="eNi-CM-sE0" secondAttribute="bottom" id="uEE-nJ-scS"/>
+                            <constraint firstItem="Tbp-wI-1ZN" firstAttribute="top" secondItem="Wk6-xe-pKT" secondAttribute="bottom" constant="54" id="v7M-Ey-FhD"/>
+                            <constraint firstItem="Pb1-vr-Sma" firstAttribute="top" secondItem="Tge-RP-4iX" secondAttribute="bottom" constant="57" id="xg0-PR-tfD"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="05L-VU-1xv"/>
+                                <exclude reference="xg0-PR-tfD"/>
+                                <exclude reference="H9c-Rz-Mxd"/>
+                                <exclude reference="Cgp-bA-v98"/>
+                                <exclude reference="gwQ-rt-tWy"/>
+                                <exclude reference="Udu-kp-AzG"/>
+                                <exclude reference="v7M-Ey-FhD"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="i1" destination="A4O-IB-trM" id="zEK-DX-4Qr"/>
@@ -105,6 +195,12 @@
                         <outlet property="i5" destination="BJs-Jo-I00" id="b02-R7-P4X"/>
                         <outlet property="i6" destination="smL-mM-w3x" id="sg2-Kz-XO2"/>
                         <outlet property="ibottom" destination="Yg0-eY-gHh" id="op8-Hr-w8x"/>
+                        <outlet property="l1" destination="Tge-RP-4iX" id="0p0-Rs-C11"/>
+                        <outlet property="l2" destination="Pb1-vr-Sma" id="SiF-yk-Kk9"/>
+                        <outlet property="l3" destination="K43-n6-Yfi" id="EHd-dX-UeG"/>
+                        <outlet property="l4" destination="QxB-lM-EnF" id="YvL-bW-JJM"/>
+                        <outlet property="l5" destination="Wk6-xe-pKT" id="5XF-k7-WK1"/>
+                        <outlet property="l6" destination="Tbp-wI-1ZN" id="rB3-vI-scS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
