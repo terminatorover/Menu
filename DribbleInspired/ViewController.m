@@ -72,6 +72,19 @@
 
 - (void)moveOut:(CGFloat)timing springVelocity:(CGFloat)inital damping:(CGFloat)damping setdelay:(CGFloat)delay
 {
+    //---->
+    [UIView animateWithDuration:timing
+                          delay:0.23
+         usingSpringWithDamping:damping
+          initialSpringVelocity:4
+                        options:0 animations:^{
+                            CGAffineTransform rotate = CGAffineTransformMakeRotation(M_PI);
+                            self.ibottom.transform = rotate;
+                        } completion:^(BOOL finished) {
+                            
+                        }];
+    
+    //----->
     [UIView animateWithDuration:timing
                           delay:0.1
          usingSpringWithDamping:damping
@@ -130,6 +143,18 @@
                         } completion:^(BOOL finished) {
                             
                         }];
+    
+    [UIView animateWithDuration:timing
+                          delay:0.23
+         usingSpringWithDamping:damping
+          initialSpringVelocity:4
+                        options:0 animations:^{
+                            self.i1.transform = CGAffineTransformIdentity;
+                        } completion:^(BOOL finished) {
+                            
+                        }];
+    
+
 
 
     
@@ -137,6 +162,17 @@
 
 - (void)moveIn:(CGFloat)timing springVelocity:(CGFloat)inital damping:(CGFloat)damping setdelay:(CGFloat)delay
 {
+    //--->
+    [UIView animateWithDuration:timing
+                          delay:0.23
+         usingSpringWithDamping:damping
+          initialSpringVelocity:4
+                        options:0 animations:^{
+                            self.ibottom.transform = CGAffineTransformIdentity;
+                        } completion:^(BOOL finished) {
+                            
+                        }];
+    //------
     [UIView animateWithDuration:timing
                           delay:0.1
          usingSpringWithDamping:damping
@@ -199,7 +235,8 @@
                         } completion:^(BOOL finished) {
                             [self unhide];
                         }];
-
+    
+   
  }
 
 - (CGAffineTransform)comboTransform
