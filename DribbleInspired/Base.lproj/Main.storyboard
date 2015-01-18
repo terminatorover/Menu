@@ -17,9 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bk-1" translatesAutoresizingMaskIntoConstraints="NO" id="eNi-CM-sE0">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cooling-50" translatesAutoresizingMaskIntoConstraints="NO" id="A4O-IB-trM">
                                 <rect key="frame" x="16" y="20" width="50" height="50"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -134,10 +131,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bk-3" translatesAutoresizingMaskIntoConstraints="NO" id="eNi-CM-sE0">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="37S-2v-F02"/>
+                                    <constraint firstAttribute="width" constant="300" id="WRj-2U-HtZ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Tge-RP-4iX" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="14" id="05L-VU-1xv"/>
+                            <constraint firstAttribute="centerY" secondItem="eNi-CM-sE0" secondAttribute="centerY" id="3Ft-bv-ecF"/>
                             <constraint firstItem="A4O-IB-trM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="3e3-yV-Fre"/>
                             <constraint firstItem="BJs-Jo-I00" firstAttribute="centerY" secondItem="Wk6-xe-pKT" secondAttribute="centerY" id="6Oo-bM-7eN"/>
                             <constraint firstItem="BJs-Jo-I00" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="7K5-xP-UwK"/>
@@ -160,6 +165,7 @@
                             <constraint firstItem="QxB-lM-EnF" firstAttribute="leading" secondItem="Odt-ni-Q3D" secondAttribute="trailing" constant="30" id="dRk-0c-4nE"/>
                             <constraint firstItem="Tbp-wI-1ZN" firstAttribute="leading" secondItem="smL-mM-w3x" secondAttribute="trailing" constant="30" id="eJq-R9-Xfx"/>
                             <constraint firstItem="Wk6-xe-pKT" firstAttribute="leading" secondItem="BJs-Jo-I00" secondAttribute="trailing" constant="30" id="efm-gq-lwd"/>
+                            <constraint firstAttribute="centerX" secondItem="eNi-CM-sE0" secondAttribute="centerX" id="fuw-19-Qjj"/>
                             <constraint firstItem="QxB-lM-EnF" firstAttribute="leading" secondItem="Odt-ni-Q3D" secondAttribute="trailing" constant="30" id="gwQ-rt-tWy"/>
                             <constraint firstItem="Odt-ni-Q3D" firstAttribute="top" secondItem="MOA-Yf-ghL" secondAttribute="bottom" constant="33" id="i6U-ai-Aoj"/>
                             <constraint firstItem="Odt-ni-Q3D" firstAttribute="centerY" secondItem="QxB-lM-EnF" secondAttribute="centerY" id="iXS-EK-1dl"/>
@@ -179,15 +185,20 @@
                             <mask key="constraints">
                                 <exclude reference="05L-VU-1xv"/>
                                 <exclude reference="xg0-PR-tfD"/>
+                                <exclude reference="agp-zp-eVu"/>
+                                <exclude reference="ayB-Ua-m4p"/>
+                                <exclude reference="lRM-Ag-HH3"/>
                                 <exclude reference="H9c-Rz-Mxd"/>
                                 <exclude reference="Cgp-bA-v98"/>
                                 <exclude reference="gwQ-rt-tWy"/>
                                 <exclude reference="Udu-kp-AzG"/>
                                 <exclude reference="v7M-Ey-FhD"/>
+                                <exclude reference="uEE-nJ-scS"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="eNi-CM-sE0" id="QqV-b7-7kA"/>
                         <outlet property="i1" destination="A4O-IB-trM" id="zEK-DX-4Qr"/>
                         <outlet property="i2" destination="HND-jP-aze" id="xEW-Wk-dOD"/>
                         <outlet property="i3" destination="MOA-Yf-ghL" id="kuZ-jk-Lq3"/>
@@ -214,7 +225,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bk-1" width="362" height="241"/>
+        <image name="bk-3" width="512" height="384"/>
         <image name="cooling-50" width="50" height="50"/>
         <image name="dna_helix-50" width="50" height="50"/>
         <image name="geography-50" width="50" height="50"/>

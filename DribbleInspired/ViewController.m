@@ -31,6 +31,7 @@
 
 
 
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
 
 //---->
@@ -48,6 +49,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     [self scaledDown];
     tapped = NO;
+    [self.view sendSubviewToBack:self.backgroundImage];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -105,6 +107,7 @@
                         options:0 animations:^{
                             CGAffineTransform rotate = CGAffineTransformMakeRotation(M_PI);
                             self.ibottom.transform = rotate;
+                            self.backgroundImage.transform = CGAffineTransformScale(self.backgroundImage.transform, 0.6, .6);
                         } completion:^(BOOL finished) {
                             
                         }];
@@ -133,8 +136,8 @@
                         }];
 
     [UIView animateWithDuration:timing
-                          delay:0.15
-         usingSpringWithDamping:.6
+                          delay:0.1 + (0.05* 2)
+         usingSpringWithDamping:damping
           initialSpringVelocity:4
                         options:0 animations:^{
                             self.l4.transform = CGAffineTransformIdentity;
@@ -143,8 +146,8 @@
                             
                         }];
     [UIView animateWithDuration:timing
-                          delay:0.17
-         usingSpringWithDamping:.6
+                          delay:0.1 + (0.05* 3)
+         usingSpringWithDamping:damping
           initialSpringVelocity:4
                         options:0 animations:^{
                             self.l3.transform = CGAffineTransformIdentity;
@@ -153,7 +156,7 @@
                             
                         }];
     [UIView animateWithDuration:timing
-                          delay:0.20
+                          delay:0.1 + (0.05* 4)
          usingSpringWithDamping:damping
           initialSpringVelocity:4
                         options:0 animations:^{
@@ -164,7 +167,7 @@
                         }];
     
     [UIView animateWithDuration:timing
-                          delay:0.23
+                          delay:0.1 + (0.05* 5)
          usingSpringWithDamping:damping
           initialSpringVelocity:4
                         options:0 animations:^{
@@ -199,6 +202,7 @@
           initialSpringVelocity:4
                         options:0 animations:^{
                             self.ibottom.transform = CGAffineTransformIdentity;
+                            self.backgroundImage.transform = CGAffineTransformIdentity;
                         } completion:^(BOOL finished) {
                             
                         }];
