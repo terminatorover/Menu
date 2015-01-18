@@ -40,12 +40,12 @@
 
 - (void)scaledDown
 {
-    self.i1.transform = CGAffineTransformMakeScale(0.001, 0.001);
-    self.i2.transform = CGAffineTransformMakeScale(0.001, 0.001);
-    self.i3.transform = CGAffineTransformMakeScale(0.001, 0.001);
-    self.i4.transform = CGAffineTransformMakeScale(0.001, 0.001);
-    self.i5.transform = CGAffineTransformMakeScale(0001, 0.001);
-    self.i6.transform = CGAffineTransformMakeScale(0.001, 0.001);
+    self.i1.transform = [self comboTransform];
+    self.i2.transform = [self comboTransform];
+    self.i3.transform = [self comboTransform];
+    self.i4.transform = [self comboTransform];
+    self.i5.transform = [self comboTransform];
+    self.i6.transform = [self comboTransform];
 
 }
 
@@ -57,12 +57,12 @@
     if(!tapped)
     {
         //move out (damping .5
-        [self moveOut:moveOut springVelocity:5 damping:.4 setdelay:delay];
+        [self moveOut:moveOut springVelocity:5 damping:.65 setdelay:delay];
     }
     else
     {
         //move in
-        [self moveIn:moveOut springVelocity:10 damping:4 setdelay:delay];
+        [self moveIn:moveOut springVelocity:0 damping:6 setdelay:delay];
     }
     
     tapped = !tapped;
@@ -77,6 +77,8 @@
          usingSpringWithDamping:damping
           initialSpringVelocity:4
                         options:0 animations:^{
+
+                            
                             self.i6.transform = CGAffineTransformIdentity;
     } completion:^(BOOL finished) {
         
@@ -140,7 +142,8 @@
          usingSpringWithDamping:damping
           initialSpringVelocity:4
                         options:0 animations:^{
-                            self.i1.transform = CGAffineTransformMakeScale(0.001, 0.001);
+                            self.i1.transform = [self comboTransform];
+                            self.i1.alpha = 0.0;
                         } completion:^(BOOL finished) {
                             
                         }];
@@ -149,7 +152,8 @@
          usingSpringWithDamping:damping
           initialSpringVelocity:4
                         options:0 animations:^{
-                            self.i2.transform = CGAffineTransformMakeScale(0.001, 0.001);
+                            self.i2.transform = [self comboTransform];
+                            self.i2.alpha = 0.0;
                         } completion:^(BOOL finished) {
                             
                         }];
@@ -159,7 +163,8 @@
          usingSpringWithDamping:.6
           initialSpringVelocity:4
                         options:0 animations:^{
-                            self.i3.transform = CGAffineTransformMakeScale(0.001, 0.001);
+                            self.i3.transform = [self comboTransform];
+                            self.i3.alpha = 0.0;
                         } completion:^(BOOL finished) {
                             
                         }];
@@ -168,7 +173,8 @@
          usingSpringWithDamping:.6
           initialSpringVelocity:4
                         options:0 animations:^{
-                            self.i4.transform = CGAffineTransformMakeScale(0.001, 0.001);
+                            self.i4.transform = [self comboTransform];
+                            self.i4.alpha = 0.0;
                         } completion:^(BOOL finished) {
                             
                         }];
@@ -177,7 +183,8 @@
          usingSpringWithDamping:damping
           initialSpringVelocity:4
                         options:0 animations:^{
-                            self.i5.transform = CGAffineTransformMakeScale(0.001, 0.001);
+                            self.i5.transform = [self comboTransform];
+                            self.i5.alpha =  0.0;
                         } completion:^(BOOL finished) {
                             
                         }];
@@ -187,14 +194,33 @@
          usingSpringWithDamping:damping
           initialSpringVelocity:4
                         options:0 animations:^{
-                            self.i6.transform = CGAffineTransformMakeScale(0.001, 0.001);
+                            self.i6.transform = [self comboTransform];
+                            self.i6.alpha = 0.0;
                         } completion:^(BOOL finished) {
-                            
+                            [self unhide];
                         }];
 
  }
 
+- (CGAffineTransform)comboTransform
+{
+    CGAffineTransform rotate = CGAffineTransformMakeRotation(M_PI);
+    CGAffineTransform scale = CGAffineTransformMakeScale(0.001, 0.001);
+    CGAffineTransform  combined = CGAffineTransformConcat(rotate, scale);
+    return combined;
+}
 
+
+- (void)unhide
+{
+    self.i1.alpha = 1.0;
+    self.i2.alpha = 1.0;
+    self.i3.alpha = 1.0;
+    self.i4.alpha = 1.0;
+    self.i5.alpha = 1.0;
+    self.i6.alpha = 1.0;
+    
+}
 
 
 
