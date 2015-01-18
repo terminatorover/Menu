@@ -52,17 +52,17 @@
 - (IBAction)bottomTap:(id)sender
 {
     
-    CGFloat moveOut = .03;
-    CGFloat delay = 0.03;
+    CGFloat moveOut = .52;
+    CGFloat delay = 0.0;
     if(!tapped)
     {
         //move out (damping .5
-        [self moveOut:moveOut springVelocity:10 damping:.5 setdelay:delay];
+        [self moveOut:moveOut springVelocity:5 damping:.4 setdelay:delay];
     }
     else
     {
         //move in
-        [self moveIn:moveOut springVelocity:10 damping:.5 setdelay:delay];
+        [self moveIn:moveOut springVelocity:10 damping:4 setdelay:delay];
     }
     
     tapped = !tapped;
@@ -73,133 +73,126 @@
 - (void)moveOut:(CGFloat)timing springVelocity:(CGFloat)inital damping:(CGFloat)damping setdelay:(CGFloat)delay
 {
     [UIView animateWithDuration:timing
-                          delay:delay
+                          delay:0.1
          usingSpringWithDamping:damping
-          initialSpringVelocity:inital
-                        options:0
-                     animations:^{
-                         self.i6.transform = CGAffineTransformIdentity;
-                     } completion:^(BOOL finished) {
-                         [UIView animateWithDuration:timing
-                                               delay:delay
-                              usingSpringWithDamping:damping
-                               initialSpringVelocity:inital
-                                             options:0
-                                          animations:^{
-                                              self.i5.transform = CGAffineTransformIdentity;
-                                          } completion:^(BOOL finished) {
-                                              [UIView animateWithDuration:timing
-                                                                    delay:delay
-                                                   usingSpringWithDamping:damping
-                                                    initialSpringVelocity:inital
-                                                                  options:0
-                                                               animations:^{
-                                                                   self.i4.transform = CGAffineTransformIdentity;
-                                                               } completion:^(BOOL finished) {
-                                                                   [UIView animateWithDuration:timing
-                                                                                         delay:delay
-                                                                        usingSpringWithDamping:damping
-                                                                         initialSpringVelocity:inital
-                                                                                       options:0
-                                                                                    animations:^{
-                                                                                        self.i3.transform = CGAffineTransformIdentity;
-                                                                                    } completion:^(BOOL finished) {
-                                                                                        [UIView animateWithDuration:timing
-                                                                                                              delay:delay
-                                                                                             usingSpringWithDamping:damping
-                                                                                              initialSpringVelocity:inital
-                                                                                                            options:0
-                                                                                                         animations:^{
-                                                                                                             self.i2.transform = CGAffineTransformIdentity;
-                                                                                                         } completion:^(BOOL finished) {
-                                                                                                             [UIView animateWithDuration:timing
-                                                                                                                                   delay:delay
-                                                                                                                  usingSpringWithDamping:damping
-                                                                                                                   initialSpringVelocity:inital
-                                                                                                                                 options:0
-                                                                                                                              animations:^{
-                                                                                                                                  self.i1.transform = CGAffineTransformIdentity;
-                                                                                                                              } completion:^(BOOL finished) {
-                                                                                                                                  
-                                                                                                                                  
-                                                                                                                              }];
-                                                                                                             
-                                                                                                         }];
-                                                                                        
-                                                                                    }];
-                                                                   
-                                                               }];
-                                              
-                                          }];
-                         
-                     }];
+          initialSpringVelocity:4
+                        options:0 animations:^{
+                            self.i6.transform = CGAffineTransformIdentity;
+    } completion:^(BOOL finished) {
+        
+    }];
+    [UIView animateWithDuration:timing
+                          delay:0.13
+         usingSpringWithDamping:damping
+          initialSpringVelocity:4
+                        options:0 animations:^{
+                            self.i5.transform = CGAffineTransformIdentity;
+                        } completion:^(BOOL finished) {
+                            
+                        }];
+
+    [UIView animateWithDuration:timing
+                          delay:0.15
+         usingSpringWithDamping:.6
+          initialSpringVelocity:4
+                        options:0 animations:^{
+                            self.i4.transform = CGAffineTransformIdentity;
+                        } completion:^(BOOL finished) {
+                            
+                        }];
+    [UIView animateWithDuration:timing
+                          delay:0.17
+         usingSpringWithDamping:.6
+          initialSpringVelocity:4
+                        options:0 animations:^{
+                            self.i3.transform = CGAffineTransformIdentity;
+                        } completion:^(BOOL finished) {
+                            
+                        }];
+    [UIView animateWithDuration:timing
+                          delay:0.20
+         usingSpringWithDamping:damping
+          initialSpringVelocity:4
+                        options:0 animations:^{
+                            self.i2.transform = CGAffineTransformIdentity;
+                        } completion:^(BOOL finished) {
+                            
+                        }];
+    
+    [UIView animateWithDuration:timing
+                          delay:0.23
+         usingSpringWithDamping:damping
+          initialSpringVelocity:4
+                        options:0 animations:^{
+                            self.i1.transform = CGAffineTransformIdentity;
+                        } completion:^(BOOL finished) {
+                            
+                        }];
+
+
     
 }
 
 - (void)moveIn:(CGFloat)timing springVelocity:(CGFloat)inital damping:(CGFloat)damping setdelay:(CGFloat)delay
 {
     [UIView animateWithDuration:timing
-                          delay:delay
+                          delay:0.1
          usingSpringWithDamping:damping
-          initialSpringVelocity:inital
-                        options:0
-                     animations:^{
-                         self.i1.transform = CGAffineTransformMakeScale(0.001, 0.001);
-                     } completion:^(BOOL finished) {
-                         [UIView animateWithDuration:timing
-                                               delay:delay
-                              usingSpringWithDamping:damping
-                               initialSpringVelocity:inital
-                                             options:0
-                                          animations:^{
-                                              self.i2.transform = CGAffineTransformMakeScale(0.001, 0.001);
-                                          } completion:^(BOOL finished) {
-                                              [UIView animateWithDuration:timing
-                                                                    delay:delay
-                                                   usingSpringWithDamping:damping
-                                                    initialSpringVelocity:inital
-                                                                  options:0
-                                                               animations:^{
-                                                                   self.i3.transform = CGAffineTransformMakeScale(0.001, 0.001);
-                                                               } completion:^(BOOL finished) {
-                                                                   [UIView animateWithDuration:timing
-                                                                                         delay:delay
-                                                                        usingSpringWithDamping:damping
-                                                                         initialSpringVelocity:inital
-                                                                                       options:0
-                                                                                    animations:^{
-                                                                                        self.i4.transform = CGAffineTransformMakeScale(0.001, 0.001);
-                                                                                    } completion:^(BOOL finished) {
-                                                                                        [UIView animateWithDuration:timing
-                                                                                                              delay:delay
-                                                                                             usingSpringWithDamping:damping
-                                                                                              initialSpringVelocity:inital
-                                                                                                            options:0
-                                                                                                         animations:^{
-                                                                                                             self.i5.transform = CGAffineTransformMakeScale(0.001, 0.001);
-                                                                                                         } completion:^(BOOL finished) {
-                                                                                                             [UIView animateWithDuration:timing
-                                                                                                                                   delay:delay
-                                                                                                                  usingSpringWithDamping:damping
-                                                                                                                   initialSpringVelocity:inital
-                                                                                                                                 options:0
-                                                                                                                              animations:^{
-                                                                                                                                  self.i6.transform = CGAffineTransformMakeScale(0.001, 0.001);
-                                                                                                                              } completion:^(BOOL finished) {
-                                                                                                                                  
-                                                                                                                                  
-                                                                                                                              }];
-                                                                                                             
-                                                                                                         }];
-                                                                                        
-                                                                                    }];
-                                                                   
-                                                               }];
-                                              
-                                          }];
-                         
-                     }];
-}
+          initialSpringVelocity:4
+                        options:0 animations:^{
+                            self.i1.transform = CGAffineTransformMakeScale(0.001, 0.001);
+                        } completion:^(BOOL finished) {
+                            
+                        }];
+    [UIView animateWithDuration:timing
+                          delay:0.13
+         usingSpringWithDamping:damping
+          initialSpringVelocity:4
+                        options:0 animations:^{
+                            self.i2.transform = CGAffineTransformMakeScale(0.001, 0.001);
+                        } completion:^(BOOL finished) {
+                            
+                        }];
+    
+    [UIView animateWithDuration:timing
+                          delay:0.15
+         usingSpringWithDamping:.6
+          initialSpringVelocity:4
+                        options:0 animations:^{
+                            self.i3.transform = CGAffineTransformMakeScale(0.001, 0.001);
+                        } completion:^(BOOL finished) {
+                            
+                        }];
+    [UIView animateWithDuration:timing
+                          delay:0.17
+         usingSpringWithDamping:.6
+          initialSpringVelocity:4
+                        options:0 animations:^{
+                            self.i4.transform = CGAffineTransformMakeScale(0.001, 0.001);
+                        } completion:^(BOOL finished) {
+                            
+                        }];
+    [UIView animateWithDuration:timing
+                          delay:0.20
+         usingSpringWithDamping:damping
+          initialSpringVelocity:4
+                        options:0 animations:^{
+                            self.i5.transform = CGAffineTransformMakeScale(0.001, 0.001);
+                        } completion:^(BOOL finished) {
+                            
+                        }];
+    
+    [UIView animateWithDuration:timing
+                          delay:0.23
+         usingSpringWithDamping:damping
+          initialSpringVelocity:4
+                        options:0 animations:^{
+                            self.i6.transform = CGAffineTransformMakeScale(0.001, 0.001);
+                        } completion:^(BOOL finished) {
+                            
+                        }];
+
+ }
 
 
 
